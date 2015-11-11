@@ -10,3 +10,5 @@
 @property(nonatomic,weak)UILabel  *numLabel;   
 //设置提示剩余多少字   
 @property(nonatomic,assign) NSInteger wordNum;    
+
+使用中传入这几个参数就可以创建一个自定义的textView
