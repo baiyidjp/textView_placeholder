@@ -16,6 +16,13 @@
 {
     if (self = [super initWithFrame:frame]) {
         
+        //设置圆角
+        self.layer.cornerRadius = 7;
+        //设置边框颜色
+        self.layer.borderColor = [UIColor colorWithRed:230/255.0 green:230/255.0 blue:230/255.0 alpha:1].CGColor;
+        //设置边框宽度
+        self.layer.borderWidth = 1.5;
+        
         //初始化站位文字的label
         UILabel *placeLabel = [[UILabel alloc]init];
         UILabel *numLabel = [[UILabel alloc]init];
@@ -103,10 +110,11 @@
     
 }
 
-//#pragma mark textViewdelegate
+//#pragma mark textViewdelegate //当字数到限制字数时结束编辑 写在引用的控制器中(遵守UITextViewDelegate)
+
 //- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 //{
-//    if (range.location > kWordNum - 1) {//当字数到限制字数时结束编辑 写在引用的控制器中
+//    if (range.location > kWordNum - 1) {
 //        
 //        return NO;
 //    }
