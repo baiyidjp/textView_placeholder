@@ -13,8 +13,11 @@
 
 使用中传入这几个参数就可以创建一个自定义的textView
 
-关于到达限制字数不可编辑的实现 请看控制器中的 代码直接复制即可   
+关于到达限制字数不可编辑的实现 请看控制器中的 代码直接复制即可  
 
+  #pragma mark 创建一个文本输入框   
+- (void)addTextView{   
+-    
   JPTextView *textView = [[JPTextView alloc]init];
     
     self.textView = textView;    
@@ -35,7 +38,8 @@
     [textView becomeFirstResponder];   
     
     [self.view addSubview:textView];   
-    
+    }   
+          
     #pragma mark textViewdelegate   
   - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text   
   {   
