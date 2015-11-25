@@ -8,7 +8,8 @@
 
 #import "JPTextView.h"
 #import "NSString+Extonsion.h"
-
+//字体大小
+#define kFont(x) [UIFont systemFontOfSize:x]
 @implementation JPTextView
 
 
